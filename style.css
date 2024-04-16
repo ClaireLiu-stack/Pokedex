@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Special+Elite&display=swap');
+*{
+    font-family: 'Special Elite', cursive; 
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #ef5350; 
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.pokemon-gallery {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; 
+    gap: 20px; 
+}
+
+.pokemon-card {
+    border: 2px solid #ddd; 
+    width: 150px; 
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3); 
+    transition: transform 0.2s;
+}
+
+.pokemon-card:hover {
+    transform: scale(1.05); 
+}
+
+.pokemon-card img {
+    width: 100%; 
+    height: auto;
+}
+
+.pokemon-card p {
+    font-family: 'Special Elite', cursive; 
+}
+
+#load-more {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); 
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.pokemon-details {
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    /* height: 60vh; */
+    max-width: 500px;
+    text-align: center;
+}
+
+.pokemon-details-head{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 20%;
+}
+.pokemon-details-footer {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    height: 80%;
+    margin-top: 20px;
+}
+.details-footer-image{
+    width: 50%;
+    margin-right: 20px;
+}
+.details-footer-image img{
+    width: 100%;
+    border: 1px solid rgb(87, 85, 85);
+    
+}
+.details-types-moves {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    /* justify-content: start; */
+}
+
+h1, h3, .details-types-moves p, .catch-btn{
+    font-family: 'Special Elite', cursive; 
+}
+h3, .close-btn{
+    margin: 0px 0px;
+}
+.catch-btn {
+    width: 100%;
+    height: 15%;
+    margin-top: 5%;
+}
+.details-types-moves h3{
+    font-weight: 800;
+    margin-top: 10px;
+}
