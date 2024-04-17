@@ -71,8 +71,8 @@ function displayPokemonDetails(details) {
   const joinedNames = names.join(", ");
   const isCaught = caughtPokemon.includes(details.name); //当前Pokemon card是否被捕捉
 
-  console.log(details.name);
-  console.log(isCaught);
+//   console.log(details.name);
+//   console.log(isCaught);
   console.log(caughtPokemon);
 
   $modal.innerHTML = `
@@ -90,6 +90,8 @@ function displayPokemonDetails(details) {
                 <div class="details-types-moves">
                     <h3>Types</h3>
                     <p>${joinedNames}</p>
+                    <h3>Order</h3>
+                    <p>${details.order}</p>
                     <button class="catch-btn" onclick="$modal.style.display='none'">${
                       isCaught ? "Release" : "Catch"
                     }</button>
