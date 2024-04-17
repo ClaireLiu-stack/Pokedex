@@ -22,7 +22,6 @@ async function fetchPokemon() {
 }
 
 // Display Pokémon in the gallery
-// Display Pokémon in the gallery
 function displayPokemon(pokemonList) {
     pokemonList.forEach((pokemon) => {
       const pokemonCard = document.createElement("div");
