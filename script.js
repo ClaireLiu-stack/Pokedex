@@ -23,32 +23,31 @@ async function fetchPokemon() {
 
 // Display Pokémon in the gallery
 function displayPokemon(pokemonList) {
-    pokemonList.forEach((pokemon) => {
-      const pokemonCard = document.createElement("div");
-      pokemonCard.classList.add("pokemon-card");
-      pokemonCard.dataset.name = pokemon.name;
-      pokemonCard.innerHTML = `
+  pokemonList.forEach((pokemon) => {
+    const pokemonCard = document.createElement("div");
+    pokemonCard.classList.add("pokemon-card");
+    pokemonCard.dataset.name = pokemon.name;
+    pokemonCard.innerHTML = `
               <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${parseUrl(
                 pokemon.url
               )}.png" alt="${pokemon.name}">
               <p>${pokemon.name}</p>
           `;
-      pokemonCard.classList.toggle(
-        "caught",
-        caughtPokemon.includes(pokemon.name)
-      );
-  
-      // 添加已捕捉 Pokemon 的样式
-      if (caughtPokemon.includes(pokemon.name)) {
-        const caughtOverlay = document.createElement("div");
-        caughtOverlay.classList.add("caught-overlay");
-        caughtOverlay.textContent = "CAUGHT";
-        pokemonCard.appendChild(caughtOverlay);
-      }
-      $pokemonGallery.appendChild(pokemonCard);
-    });
-  }
-  
+    pokemonCard.classList.toggle(
+      "caught",
+      caughtPokemon.includes(pokemon.name)
+    );
+
+    // 添加已捕捉 Pokemon 的样式
+    if (caughtPokemon.includes(pokemon.name)) {
+      const caughtOverlay = document.createElement("div");
+      caughtOverlay.classList.add("caught-overlay");
+      caughtOverlay.textContent = "CAUGHT";
+      pokemonCard.appendChild(caughtOverlay);
+    }
+    $pokemonGallery.appendChild(pokemonCard);
+  });
+}
 
 // Fetch and display Pokémon details in modal
 async function fetchPokemonDetails(pokemonName) {
