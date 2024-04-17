@@ -133,8 +133,37 @@ h3, .close-btn{
     width: 100%;
     height: 15%;
     margin-top: 5%;
+    border-color: #4CAF50;
+    background-color: #8ecf90;
 }
 .details-types-moves h3{
     font-weight: 800;
     margin-top: 10px;
+}
+.caught{
+    position: relative;
+}
+.caught-label {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(184, 73, 73, 0.5);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 0.75em;
+}
+.caught-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(76, 175, 80, 0.7); 
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em; 
+    pointer-events: none; 
 }
