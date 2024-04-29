@@ -117,9 +117,10 @@ function toggleCatchButton(pokemonCard, pokemonName) {
         caughtOverlay.remove();
       }
       $catchButton.textContent = "Catch";
-      $catchButton.style.borderColor = "red";
-      $catchButton.style.backgroundColor = "lightCoral";
-
+      // $catchButton.classList.remove("release");
+      // $catchButton.classList.add("catch");
+      
+      // console.log('1');
       const index = caughtPokemon.indexOf(pokemonName);
       caughtPokemon.splice(index, 1);
       pokemonCard.classList.remove("caught");
@@ -129,6 +130,9 @@ function toggleCatchButton(pokemonCard, pokemonName) {
       caughtOverlay.textContent = "CAUGHT";
       pokemonCard.appendChild(caughtOverlay);
       $catchButton.textContent = "Release";
+      // $catchButton.classList.remove("catch");
+      // $catchButton.classList.add("release");
+      // console.log("2");
       caughtPokemon.push(pokemonName);
       pokemonCard.classList.add("caught");
     }

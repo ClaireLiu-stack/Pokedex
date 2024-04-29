@@ -133,6 +133,15 @@ h3, .close-btn{
     border-color: #4CAF50;
     background-color: #8ecf90;
 }
+.catch{
+    border-color: #4CAF50;
+    background-color: #8ecf90;
+}
+.release{
+    border-color: red;
+    background-color: rgb(232, 159, 159);
+}
+
 .details-types-moves h3{
     font-weight: 800;
     margin-top: 10px;
